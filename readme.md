@@ -60,17 +60,15 @@ API
 int ed25519_create_seed(unsigned char *seed);
 ```
 
-Creates a 32 byte random seed in `seed` for key generation. `seed` must be a
-writable 32 byte buffer. Returns 0 on success, and nonzero on failure.
+Warning: It's empty and don't use this to generate private key.
 
 ```c
 void ed25519_create_keypair(unsigned char *public_key, unsigned char *private_key,
                             const unsigned char *seed);
 ```
 
-Creates a new key pair from the given seed. `public_key` must be a writable 32
-byte buffer, `private_key` must be a writable 64 byte buffer and `seed` must be
-a 32 byte buffer.
+Warning: don't use this to generate private key.
+
 
 ```c
 void ed25519_sign(unsigned char *signature,
